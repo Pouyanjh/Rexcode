@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'user',
     'azbankgateways',
-    'bank'
+    'bank',
+    'spotplayer'
 ]
 
 MIDDLEWARE = [

@@ -23,5 +23,6 @@ urlpatterns = [
     path('talk/', views.talkpost, name='addtalk'),
     path('', include('user.urls')),
     path('', include('bank.urls')),
+    path('', include('spotplayer.urls')),
 
 ]
