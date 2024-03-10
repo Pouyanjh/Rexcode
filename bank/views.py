@@ -58,7 +58,7 @@ def Idpaycallback(request):
     success = request.GET.get('success')
     trackId = request.GET.get('trackId')
     callbackpaystatus = request.GET.get('status')
-    print(status)
+    print(callbackpaystatus)
 
 
     try:
@@ -109,9 +109,9 @@ def Idpaycallback(request):
 
 
         else:
-            dbstatus = idpayupdatedb(pay_entry, callbackpaystatus, trackId)
+            idpayupdatedb(pay_entry, callbackpaystatus, trackId)
             return HttpResponseRedirect(
-                f"https://localhost:5173/payresult/{orderId}/{trackId}/{success}/?db={dbstatus}")
+                f"https://localhost:5173/payresult/{orderId}/{trackId}/{success}")
 
 
 
